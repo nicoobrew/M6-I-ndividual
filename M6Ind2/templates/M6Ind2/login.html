@@ -1,0 +1,34 @@
+{% extends "M6ind2/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+
+<!-- Banner de la pagina -->
+<header>
+    <!-- Background image -->
+    <div class="position-relative bg-image" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 400px;">
+      <div class="position-absolute w-100 h-100" style="background-color: rgba(44, 44, 44, 0.527);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center px-4">
+            <h1 class="">Ingresa a tu cuenta</h1>
+            <!-- <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container mt-5">
+    <div class="row my-3 d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-6">
+            <form method="POST" class="card p-4">
+                {% csrf_token %}
+                {{form|crispy}}
+                <input type="submit" class="btn btn-outline-primary my-3" value="Login">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

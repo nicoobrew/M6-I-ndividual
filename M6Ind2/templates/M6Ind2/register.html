@@ -1,0 +1,84 @@
+{% extends "M6ind2/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<!-- Banner de la pagina -->
+<header>
+  <!-- Background image -->
+  <div class="position-relative bg-image"
+    style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 400px;">
+    <div class="position-absolute w-100 h-100" style="background-color: rgba(44, 44, 44, 0.527);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white text-center px-4">
+          <h1 class="">Registrate en nuestro Newsletter</h1>
+          <!-- <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Formulario de registo newsletter -->
+<section>
+  <div class="container mt-5 mb-5">
+    <h6 class="mt-2"></h6>
+    <div class="row g-4">
+      <div class="card col-md-6">
+        <form method="POST">
+          {% csrf_token %}
+          {{formulario.as_p}}
+          <button class="btn btn-success" type="Submit">Ingresar</button>
+        </form>
+        <div class="mt-3 text-center">
+          <small>¿Ya tienes una cuenta? <a href="{% url 'M6Ind2:login' %}">Iniciar sesión</a></small>
+        </div>
+        {% if messages %}
+        <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+
+      <!-- Carousel con imagenes del sitio web -->
+      <div class="col-md-6">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'img/img1.jpg' %}" class="d-block w-100" alt="Slide 1">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/img2.jpg' %}" class="d-block w-100" alt="Slide 2">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/img3.jpg' %}" class="d-block w-100" alt="Slide 3">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

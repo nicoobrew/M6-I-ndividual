@@ -1,0 +1,192 @@
+{% extends "M6ind2/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Banner de la pagina -->
+<header>
+  <!-- <div class="p-5 text-center bg-image"
+  style=" background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80');  height: 900px;">
+  <div class="mask" style="background-color: rgba(44, 44, 44, 0.527); height: 800px;">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white mb-5 mt-5">
+        <h1 class="mb-3">Bienvenidos</h1>
+        <h3>A nuestra pagina web</h3>
+        <h4 class="mb-3">a nuestra tienda online</h4>
+        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="{% static 'img/slide1.jpg' %}" alt="">
+        <div class="slide-content">
+          <h1>¡Bienvenidos!</h1>
+          <h1>Pronto encontrarás todos nuestros productos</h1>
+          <button type="button" class="button-slider">Ver mas</button>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/slider2.jpg' %}" alt="">
+        <div class="slide-content">
+          <!-- <h1>Pronto encontraras todos nuestros productos</h1> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/slider3.jpg' %}" alt="">
+        <div class="slide-content">
+          <!-- <h1>Registrate</h1> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</header>
+
+<section>
+  <div class="container mt-5 mb-5 justify-content-center align-items-center">
+    <div class="row iconos-head">
+      <div class="col-2 d-flex">
+        <div class="margen">
+          <i class="fa-solid fa-leaf fa-3x" style="color: #800000;"></i>
+        </div>
+        <div class="d-flex flex-column align-items-start ml-2">
+          <h3>Productos</h3>
+          <h4>Naturales</h4>
+        </div>
+      </div>
+      <div class="col-2 col-xs-6 d-flex iconos-head">
+        <div class="margen">
+          <i class="fa-solid fa-heart fa-3x " style="color: #800000;"></i>
+        </div>
+        <div class="d-flex flex-column align-items-start ml-2 ">
+          <h3>Hechos</h3>
+          <h4>con amor</h4>
+        </div>
+      </div>
+      <div class="col-2 col-xs-6 d-flex">
+        <div class="margen">
+          <i class="fa-solid fa-cart-shopping fa-3x" style="color: #800000;"></i>
+        </div>
+
+        <div class="d-flex flex-column align-items-start ml-2">
+          <h3>Compra</h3>
+          <h4>Seguro</h4>
+        </div>
+      </div>
+      <div class="col-2 col-xs-6 d-flex">
+        <div class="margen">
+          <i class="fa-solid fa-credit-card fa-3x" style="color: #800000;"></i>
+        </div>
+        <div class="d-flex flex-column align-items-start ml-2">
+          <h3>Paga</h3>
+          <h4>Tranquilo</h4>
+        </div>
+      </div>
+      <div class="col-2 col-xs-6 d-flex">
+        <div class="margen">
+          <i class="fa-solid fa-truck-fast fa-3x" style="color: #800000;"></i>
+        </div>
+        <div class="d-flex flex-column align-items-start ml-2">
+          <h3>Envios a</h3>
+          <h4>todo Chile</h4>
+        </div>
+      </div>
+      <div class="col-2 col-xs-6 d-flex">
+        <div class="margen">
+          <i class="fa-regular fa-face-smile-beam fa-3x" style="color: #800000;"></i>
+        </div>
+        <div class="d-flex flex-column align-items-start ml-2">
+          <h3>Disfruta nuestros</h3>
+          <h4>Productos</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Imagenes con informacion -->
+<div class="container ">
+  <div class="text-center cat">
+    <h2>
+      Categorias 😊
+    </h2>
+  </div>
+  <div class="row m-5">
+    <div class="col-sm-4">
+      <div class="card bloque">
+        <img
+          src="https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+          class="card-img-top" alt="Chicago Skyscrapers" />
+        <div class="overlay-texto">
+          <h5>Café de Especialidad</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card bloque position-relative">
+        <img
+          src="https://images.unsplash.com/photo-1577590835286-1cdd24c08fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+          class="card-img-top" alt="Chicago Skyscrapers" />
+        <div class="overlay-texto">
+          <h5>Articulos de Latte Art</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card bloque">
+        <img
+          src="https://images.unsplash.com/photo-1541469406036-71229832e06e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+          class="card-img-top" alt="Chicago Skyscrapers" />
+        <div class="overlay-texto">
+          <h5>Café para Filtrados</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  let slideIndex = 0;
+
+  function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function updateSlideContent(index) {
+    const currentSlide = slides[index];
+    const slideContent = currentSlide.querySelector('.slide-content');
+    const slideText = slideContent.querySelector('p'); // Cambia a la etiqueta de texto que estés usando
+    // Puedes cambiar el texto según el slide actual
+    switch (index) {
+      case 0:
+        slideText.textContent = "HOLAAAA";
+        break;
+      case 1:
+        slideText.textContent = "KOMO TAS";
+        break;
+      case 2:
+        slideText.textContent = "Descripción del tercer slide.";
+        break;
+      // Agrega más casos según el número de slides
+    }
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+    updateSlideContent(slideIndex);
+  }
+
+  setInterval(nextSlide, 8000);
+  showSlide(slideIndex);
+  updateSlideContent(slideIndex); 
+</script>
+{% endblock content%}
